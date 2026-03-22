@@ -1,6 +1,7 @@
 [
   { "id": "camry-22", "make": "Toyota", "model": "Camry", "years": "2018–2024", "mpg": 32, "type": "gas" },
   { "id": "camry-hybrid", "make": "Toyota", "model": "Camry Hybrid", "years": "2018–2024", "mpg": 46, "type": "gas" },
+  { "id": "camry-00s", "make": "Toyota", "model": "Camry", "years": "2002–2011", "mpg": 27, "type": "gas" },
   { "id": "corolla-22", "make": "Toyota", "model": "Corolla", "years": "2019–2024", "mpg": 35, "type": "gas" },
   { "id": "prius-22", "make": "Toyota", "model": "Prius", "years": "2016–2024", "mpg": 54, "type": "gas" },
   { "id": "prius-prime", "make": "Toyota", "model": "Prius Prime", "years": "2017–2024", "mpg": 54, "type": "gas" },
@@ -26,6 +27,7 @@
   { "id": "jetta", "make": "Volkswagen", "model": "Jetta", "years": "2019–2024", "mpg": 36, "type": "gas" },
   { "id": "focus", "make": "Ford", "model": "Focus", "years": "2015–2018", "mpg": 34, "type": "gas" },
   { "id": "fusion-hybrid", "make": "Ford", "model": "Fusion Hybrid", "years": "2013–2020", "mpg": 42, "type": "gas" },
+  { "id": "cadillac-xt5", "make": "Cadillac", "model": "XT5", "years": "2015–2020", "mpg": 24, "type": "gas" },
   { "id": "malibu", "make": "Chevrolet", "model": "Malibu", "years": "2016–2023", "mpg": 32, "type": "gas" },
   { "id": "cruze", "make": "Chevrolet", "model": "Cruze", "years": "2016–2019", "mpg": 35, "type": "gas" },
   { "id": "model3-sr", "make": "Tesla", "model": "Model 3 Standard Range", "years": "2021–2024", "mpg": null, "type": "ev", "mi_per_kwh": 4.1 },

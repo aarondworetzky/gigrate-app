@@ -40,7 +40,7 @@ export default function CheatSheet({ profile, cheatSheet, onReset }) {
         </div>
 
         <p className={styles.cardFooter}>
-          Sitting still beats a bad job · generated {generatedDate}
+          Sitting still beats a bad job{generatedDate ? ` · ${generatedDate}` : ''}
         </p>
       </div>
 

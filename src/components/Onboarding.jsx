@@ -78,7 +78,7 @@ export default function Onboarding({ onComplete, theme, onToggleTheme }) {
       electricityRate: profile.electricityRate,
     })
     const rules = generateCheatSheet({ cpm, targetHourly: profile.targetHourly })
-    const sheet = { rules, cpm }
+    const sheet = { rules, cpm, generatedAt: Date.now() }
 
     saveProfile(profile)
     saveCheatSheet(sheet)

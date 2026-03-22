@@ -67,3 +67,16 @@
   flex: 1;
   padding: 16px;
 }
+
+.footer {
+  text-align: center;
+  padding: 12px 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}
+
+[data-theme="light"] .footer {
+  color: var(--text-3);
+}

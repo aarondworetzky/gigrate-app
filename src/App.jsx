@@ -79,6 +79,10 @@ export default function App() {
           <Logger profile={profile} />
         )}
       </main>
+
+      <footer className={styles.footer}>
+        v{__APP_VERSION__}
+      </footer>
     </div>
   )
 }

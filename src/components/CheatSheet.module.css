@@ -1,0 +1,241 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── The card — screenshot-worthy ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--purple);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--purple);
+}
+
+[data-theme="light"] .card {
+  border-color: var(--yellow);
+  box-shadow: 0 2px 16px rgba(124, 58, 237, 0.10);
+}
+
+[data-theme="light"] .card::before {
+  background: var(--yellow);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 18px 0;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 3px;
+}
+
+[data-theme="light"] .cardTitle { color: var(--purple); }
+
+.cardSub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  line-height: 1.4;
+}
+
+.cpmBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.cpmNum {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--yellow);
+}
+
+[data-theme="light"] .cpmNum { color: var(--purple); }
+
+.cpmLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-3);
+}
+
+/* ── 4-column table ── */
+.tableWrap {
+  margin: 14px 0 0;
+}
+
+/* Grid: Distance(wide) | Gas | Min | App Shows */
+.tableHeader,
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.4fr 1.8fr;
+  padding: 8px 18px;
+  gap: 4px;
+}
+
+.tableHeader {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .tableHeader {
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.tableHeader span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* Right-align numeric columns */
+.tableHeader span:nth-child(2),
+.tableHeader span:nth-child(3),
+.tableHeader span:nth-child(4) {
+  text-align: right;
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  min-height: 52px;
+}
+
+.tableRowLast {
+  border-bottom: none;
+}
+
+/* Cells */
+.cellDist {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+}
+
+.cellGas {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+  text-align: right;
+}
+
+.cellMin {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  line-height: 1;
+}
+
+.cellApp {
+  text-align: right;
+}
+
+.appRange {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+  background: rgba(124, 58, 237, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 3px 6px;
+  display: inline-block;
+}
+
+[data-theme="light"] .appRange {
+  background: rgba(250, 204, 21, 0.18);
+  color: var(--text-1);
+}
+
+.skipDash {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.cardFooter {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-3);
+  padding: 12px 18px 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btnReset {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  min-height: 44px;
+}
+
+/* ── How to use ── */
+.howto {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.howtoTitle {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: 10px;
+}
+
+.howtoList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.howtoList li {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.howtoList strong {
+  color: var(--text-1);
+  font-weight: 600;
+}

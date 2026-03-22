@@ -79,17 +79,17 @@
   color: var(--text-3);
 }
 
-/* ── 4-column table ── */
+/* ── 5-column table ── */
 .tableWrap {
   margin: 14px 0 0;
 }
 
-/* Grid: Distance(wide) | Gas | Min | App Shows */
+/* Grid: Dist | Fuel | $/mi | Min Total | App ~$ */
 .tableHeader,
 .tableRow {
   display: grid;
-  grid-template-columns: 2fr 1.2fr 1.4fr 1.8fr;
-  padding: 8px 18px;
+  grid-template-columns: 1.6fr 1fr 1.2fr 1.1fr 1.5fr;
+  padding: 8px 14px;
   gap: 4px;
 }
 
@@ -112,10 +112,11 @@
   color: var(--text-3);
 }
 
-/* Right-align numeric columns */
+/* Right-align numeric columns (cols 2–5) */
 .tableHeader span:nth-child(2),
 .tableHeader span:nth-child(3),
-.tableHeader span:nth-child(4) {
+.tableHeader span:nth-child(4),
+.tableHeader span:nth-child(5) {
   text-align: right;
 }
 
@@ -146,9 +147,17 @@
   text-align: right;
 }
 
+.cellPerMile {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+  text-align: right;
+}
+
 .cellMin {
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   text-align: right;

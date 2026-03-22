@@ -68,6 +68,7 @@ export function generateCheatSheet({ cpm, targetHourly }) {
       maxMiles: band.maxMiles,
       gasCost,
       minPayout,
+      minPerMile: parseFloat((minPayout / midMiles).toFixed(2)),
       appShowsLow: minPayout + tipLow,
       appShowsHigh: minPayout + tipHigh,
       skip: band.skip || false,

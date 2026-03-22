@@ -25,13 +25,14 @@ export default function CheatSheet({ profile, cheatSheet, onReset }) {
           </div>
         </div>
 
-        {/* 4-column table */}
+        {/* 5-column table */}
         <div className={styles.tableWrap}>
           <div className={styles.tableHeader}>
-            <span>Distance</span>
-            <span>Gas Cost</span>
-            <span>Min Accept</span>
-            <span>App Shows</span>
+            <span>Dist</span>
+            <span>Fuel</span>
+            <span>Min $/mi</span>
+            <span>Min Total</span>
+            <span>App ~$</span>
           </div>
           {rules.map((rule, i) => (
             <RuleRow key={i} rule={rule} isLast={i === rules.length - 1} />
@@ -55,7 +56,7 @@ export default function CheatSheet({ profile, cheatSheet, onReset }) {
         <p className={styles.howtoTitle}>How to use this</p>
         <ol className={styles.howtoList}>
           <li>When Uber shows a new job, check the distance.</li>
-          <li>Find that row — see the <strong>Min Accept</strong> number.</li>
+          <li>Find that row — <strong>Min $/mi</strong> is the per-mile floor; <strong>Min Total</strong> is the job dollar floor.</li>
           <li>If the app shows less than <strong>App Shows</strong> range, it's likely a low offer or tip bait.</li>
           <li>Log your last job in <strong>Log Job</strong> to track your real hourly.</li>
         </ol>
@@ -80,6 +81,9 @@ function RuleRow({ rule, isLast }) {
     <div className={rowClass}>
       <span className={styles.cellDist}>{rule.label}</span>
       <span className={styles.cellGas}>${rule.gasCost.toFixed(2)}</span>
+      <span className={styles.cellPerMile}>
+        {rule.skip ? <span className={styles.skipDash}>—</span> : `$${rule.minPerMile}/mi`}
+      </span>
       <span className={styles.cellMin} style={{ color: minColor }}>
         {rule.skip ? 'skip it' : `$${rule.minPayout}`}
       </span>

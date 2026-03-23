@@ -203,13 +203,13 @@ function StepFuel({ isEv, gasPrice, setGasPrice, electricityRate, setElectricity
 function StepRoute({ hotspotMiles, setHotspotMiles }) {
   return (
     <div className={styles.fields}>
-      <p className={styles.desc}>Do you have to drive somewhere before you can start getting orders?</p>
+      <p className={styles.desc}>How far do you drive before you start accepting jobs?</p>
       <div className={styles.field}>
-        <label className={styles.label}>Miles from home to your hotspot</label>
-        <input className={styles.input} type="number" min="0" step="0.1" placeholder="e.g. 3.5 (or 0)"
+        <label className={styles.label}>Miles from home to where you start</label>
+        <input className={styles.input} type="number" min="0" step="0.1" placeholder="e.g. 4 (or 0)"
           value={hotspotMiles} onChange={e => setHotspotMiles(e.target.value)} inputMode="decimal" />
       </div>
-      <p className={styles.hint}>This "deadhead" cost is factored into your real earnings. Enter 0 if you start in a hotspot.</p>
+      <p className={styles.hint}>e.g. driving to a gym, coffee shop, or parking spot near your hotspot. This fuel cost is factored into your real earnings. Enter 0 if you start right at home.</p>
     </div>
   )
 }

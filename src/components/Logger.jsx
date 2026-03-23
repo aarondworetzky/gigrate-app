@@ -102,6 +102,7 @@ export default function Logger({ profile }) {
               <label className={styles.label}>Minutes</label>
               <input className={styles.input} type="number" min="1" step="1"
                 placeholder="0" value={durationMin} onChange={e => setDurationMin(e.target.value)} inputMode="numeric" />
+              <p className={styles.hint}>Include wait time at the restaurant — you're paid for this.</p>
             </div>
           </div>
 
